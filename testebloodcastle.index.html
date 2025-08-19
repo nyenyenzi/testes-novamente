@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Blood Castle — Fichas & Clãs</title>
+
+  <!-- Font: nosifer-regular -->
+  <style>
+    @font-face {
+      font-family: "Nosifer";
+      src: url("fonts/nosifer-regular.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* Reset simples */
+    *{box-sizing:border-box}
+    html,body{height:100%; margin:0; padding:0}
+    body{
+      font-family: "Nosifer", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg,#030205 0%, #0d0b12 100%);
+      color:#f4f1ff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:20px;
+    }
+
+    header{width:100%; max-width:1100px; display:flex; align-items:center; justify-content:space-between; gap:12px}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo-dot{width:12px;height:36px;background:#b9002f;border-radius:4px}
+    h1{margin:0;font-size:20px;color:#b9002f; letter-spacing:0.6px}
+    p.lead{margin:0;color:#d7c2c2;font-size:13px;max-width:720px}
+
+    nav{display:flex; gap:8px; flex-wrap:wrap}
+    nav button{
+      background:#15121d; color:#f4f1ff; border:1px solid #3b2a4c; padding:8px 12px;
+      border-radius:10px; cursor:pointer; font-weight:700;
+    }
+    nav button.active{background:#b9002f; color:#fff; border-color:#7a0019}
+
+    main{width:100%; max-width:1100px}
+
+    /* HERO */
+    .hero{
+      position:relative; width:100%; border-radius:14px; overflow:hidden;
+      background: url('https://i.imgur.com/Qw6N7sZ.jpeg') center/cover no-repeat;
+      min-height:180px;
+      display:flex; align-items:center; justify-content:center;
+    }
+    .hero::after{
+      content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(0,0,0,0.75), rgba(0,0,0,0.45));
+    }
+    .hero .inner{position:relative; z-index:1; padding:28px; text-align:center; max-width:900px}
+    .hero h2{margin:0;color:#f4f1ff;font-size:24px}
+    .hero p{margin-top:10px;color:#e6d4d4;font-size:14px;line-height:1.4}
+
+    /* GRID */
+    .grid{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin-top:14px}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid #3b2a4c; padding:14px; border-radius:12px; min-height:150px;
+      display:flex; flex-direction:column; gap:8px; justify-content:space-between;
+    }
+    .card .top{display:flex; align-items:center; gap:12px}
+    .icon{font-size:36px}
+    .name{font-weight:800; font-size:18px}
+    .desc{color:#d7c2c2; font-size:13px; line-height:1.3}
+
+    .meta{display:flex; align-items:center; justify-content:space-between; gap:8px}
+    .order{font-size:12px; color:#bfb7b7}
+    .level{
+      padding:6px 10px; border-radius:999px; font-weight:800; font-size:13px; color:#0b0b0b;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    }
+
+    /* Níveis (cores) */
+    .level.extremo{background:#ff2d55}
+    .level.muitoalto{background:#ff6a00}
+    .level.alto{background:#ffb000}
+    .level.moderado{background:#d6c400}
+    .level.baixo{background:#3bd186}
+    .level.variavel{background:#a48bff}
+
+    /* CLÃS (cards mais textuais) */
+    .clan{background:#15121d;border:1px solid #3b2a4c;border-radius:12px;padding:14px}
+    .clan h3{margin:0 0 8px 0}
+    .clan p{margin:6px 0;color:#d7c2c2;font-size:13px}
+
+    /* Seções ocultas */
+    .hidden{display:none !important}
+
+    footer{width:100%; max-width:1100px; text-align:center;color:#7a0019; padding:14px 0; border-top:1px solid rgba(255,255,255,0.02)}
+    a{color:inherit}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo-dot" aria-hidden="true"></div>
+      <div>
+        <h1>The Blood Castle</h1>
+        <p class="lead">Entre pelas portas pesadas de ferro e deixe que as sombras o envolvam. Este não é apenas um castelo — é um reino vivo, onde espíritos vagam, criaturas ancestrais despertam e cada corredor guarda segredos de sangue e eternidade.
+        Aqui, cada visitante é mais do que um convidado: torna-se parte da lenda.
+        Atravesse as páginas, descubra as classes, escolha seu caminho… e lembre-se: uma vez dentro, o castelo nunca esquece seu nome.</p>
+      </div>
+    </div>
+
+    <nav aria-label="Menu principal">
+      <button id="btn-home" class="active">Início</button>
+      <button id="btn-classes">Classes</button>
+      <button id="btn-clans">Clãs</button>
+      <button id="btn-history">História</button>
+      <button id="btn-contact">Comunidade</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME / HERO -->
+    <section id="home" class=
+      </div>
+    </section>
+
+    <!-- CLASSES -->
+    <section id="classes" class="hidden" aria-labelledby="btn-classes">
+      <h2 style="color:#b9002f; text-align:center; margin:14px 0 6px 0">Classes da Comunidade</h2>
+      <div class="grid" id="classes-grid">
+        <!-- Cards gerados estáticos (você pode transformar em dinâmico se quiser) -->
+        <article class="card" data-order="1">
+          <div class="top">
+            <div class="icon">🔥</div>
+            <div>
+              <div class="name">Demônios</div>
+              <div class="desc">Nascidos do fogo e da corrupção; sua presença corrompe tudo ao redor.</div>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="order">Ordem de força: #01</div>
+            <div class="level extremo">Extremo</div>
+          </div>
+        </article>
+
+        <article class="card" data-order="2">
+          <div class="top">
+            <div class="icon">☠️</div>
+            <div>
+              <div class="name">Necromantes</div>
+              <div class="desc">Guardam domínio sobre a morte; cada cadáver vira um soldado ao seu comando.</div>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="order">Ordem de força: #02</div>
+            <div class="level muitoalto">Muito Alto</div>
+          </div>
+        </article>
+
+        <article class="card" data-order="3">
+          <div class="top">
+            <div class="icon">🦇</div>
+            <div>
+              <div class="name">Vampiros</div>
+              <div class="desc">Senhores da noite; belos, cruéis e implacáveis no jogo do sangue.</div>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="order">Ordem de força: #03</div>
+            <div class="level muitoalto">Muito Alto</div>
+          </div>
+        </article>
+
+        <article class="card" data-order="4">
+          <div class="top">
+            <div class="icon">🔮</div>
+            <div>
+              <div class="name">Feiticeiros Sombrios</div>
+              <div class="desc">Mestres das artes proibidas; manipulam pactos e maldições.</div>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="order">Ordem de força: #04</div>
+            <div class="level alto">Alto</div>
+          </div>
+        </article>
+
+        <article class="card" data-order="5">
+          <div class="top">
+            <div class="icon">🌑</div>
+            <div>
+              <div class="name">Lobisomens</div>
+              <div class="desc">Filhos da lua; ferocidade e instinto puro quando a noite cai.</div>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="order">Ordem de força: #05</div>
+            <div class="level alto">Alto</div>
+          </div>
+        </article>
+
+        <article class="card" data-order="6">
+          <div class="top">
+            <div class="icon">🪨</div>
+            <div>
+              <div class="name">Gárgulas</div>
+              <div class="desc">Guardiões de pedra; imóveis até que a noite as acorde.</div>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="order">Ordem de força: #06</div>
+            <div class="level moderado">Moderado</div>
+          </div>
+        </article>
+
+        <article class="card" data-order="7">
+          <div class="top">
+            <div class="icon">🕷</div>
+            <div>
+              <div class="name">Sombrios</div>
+              <div class="desc">Mestres da camuflagem; deslizam pela escuridão sem serem notados.</div>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="order">Ordem de força: #07</div>
+            <div class="level moderado">Moderado</div>
+          </div>
+        </article>
+
+        <article class="card" data-order="8">
+          <div class="top">
+            <div class="icon">👻</div>
+            <div>
+              <div class="name">Fantasmas</div>
+              <div class="desc">Almas presas entre mundos; lamentos que ecoam pelos corredores.</div>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="order">Ordem de força: #08</div>
+            <div class="level baixo">Baixo</div>
+          </div>
+        </article>
+
+        <article class="card" data-order="9">
+          <div class="top">
+            <div class="icon">🧟</div>
+            <div>
+              <div class="name">Zumbis</div>
+              <div class="desc">Carne apodrecida e fome eterna; onde passam, a vida apodrece.</div>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="order">Ordem de força: #09</div>
+            <div class="level baixo">Baixo</div>
+          </div>
+        </article>
+
+        <article class="card" data-order="10">
+          <div class="top">
+            <div class="icon">🌙</div>
+            <div>
+              <div class="name">Assassinos da Lua</div>
+              <div class="desc">Mortais amaldiçoados que caçam por prazer; letalidade variável.</div>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="order">Ordem de força: #10</div>
+            <div class="level variavel">Variável</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CLÃS -->
+    <section id="clans" class="hidden" aria-labelledby="btn-clans">
+      <h2 style="color:#b9002f; text-align:center; margin:14px 0 6px 0">Clãs do Blood Castle</h2>
+      <div class="grid">
+        <article class="clan">
+          <h3>Círculo de Abaddon</h3>
+          <p><strong>Membros:</strong> Demônios, Feiticeiros Sombrio</p>
+          <p><strong>Território:</strong> Torre das Chamas e Salão das Trevas</p>
+          <p><strong>Característica:</strong> Poderosos, inteligentes e manipuladores.</p>
+        </article>
+
+        <article class="clan">
+          <h3>Ordem da Sepultura</h3>
+          <p><strong>Membros:</strong> Necromantes, Zumbis</p>
+          <p><strong>Território:</strong> Catacumbas e Salas Subterrâneas</p>
+          <p><strong>Característica:</strong> Estratégicos, temidos por exércitos de mortos.</p>
+        </article>
+
+        <article class="clan">
+          <h3>Noite Eterna</h3>
+          <p><strong>Membros:</strong> Lobisomens, Assassinos da Lua</p>
+          <p><strong>Território:</strong> Pátio da Lua e Bosque Assombrado</p>
+          <p><strong>Característica:</strong> Furtivos, caçadores noturnos e instintivos.</p>
+        </article>
+
+        <article class="clan">
+          <h3>Véu Carmesim</h3>
+          <p><strong>Membros:</strong> Sombrios, Fantasmas</p>
+          <p><strong>Território:</strong> Corredores Escuros e Torres Abandonadas</p>
+          <p><strong>Característica:</strong> Mestres da camuflagem, emboscadas e terror psicológico.</p>
+        </article>
+
+        <article class="clan">
+          <h3>Corte de Sangreal</h3>
+          <p><strong>Membros:</strong> Vampiros, Gárgulas</p>
+          <p><strong>Território:</strong> Salão Principal e Portões do Castelo</p>
+          <p><strong>Característica:</strong> Defensores e predadores clássicos; combinam força física e inteligência.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- HISTÓRIA -->
+    <section id="history" class="hidden" aria-labelledby="btn-history">
+      <h2 style="color:#b9002f; text-align:center; margin:14px 0 6px 0">História do Castelo</h2>
+      <div style="max-width:900px; margin:0 auto; color:#e0bcbc; font-style:italic; padding:12px;">
+        <p>Dizem que, há séculos, quando a lua ainda era jovem e os ventos carregavam sussurros antigos, a maga Melinoe ergueu o castelo que hoje todos conhecem como Blood Castle. Não foi uma construção comum, nem feita de pedra ou tijolo. Cada torre, cada muralha, nasceu de sombras, sangue e magia proibida.
+        
+        Conta-se que Melinoe não desejava apenas um lar, mas um reino onde o impossível pudesse caminhar livre. Para isso, ela convocou espíritos errantes, criaturas esquecidas e demônios antigos. Com pactos selados sob a luz da lua, ela moldou o castelo como uma fortaleza viva: paredes que sussurram, escadas que se reorganizam e corredores que nunca terminam.
+        
+        O castelo tornou-se um refúgio para aqueles que não pertenciam ao mundo comum: lobisomens, vampiros, zumbis, bruxos e assassinos amaldiçoados encontraram ali seu lar, e o próprio castelo passou a alimentar-se da essência de seus moradores, tornando-se cada vez mais forte, obscuro e lendário.
+        
+        Hoje, o Blood Castle não é apenas pedra e sangue — é uma entidade. Uma lenda viva que guarda os segredos de Melinoe e de todos que ousaram atravessar suas portas. Quem entra, torna-se parte da história… e quem ousa desafiá-lo, pode nunca mais sair.</p>
+      </div>
+    </section>
+
+    <!-- CONTATO / DISCORD -->
+    <section id="contact" class="hidden" aria-labelledby="btn-contact">
+      <h2 style="color:#b9002f; text-align:center; margin:14px 0 6px 0">Comunidade</h2>
+      <div style="text-align:center; color:#e6d4d4;">
+        <p>Junte-se ao nosso Discord:</p>
+        <p><a href="https://discord.gg/FzjECAjF" target="_blank" rel="noopener noreferrer" style="color:#fff; text-decoration:underline;">Clique aqui para entrar</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2025 The Blood Castle — 𝑏𝑦 𝑛𝑦𝑒𝑛𝑧𝑖.</footer>
+
+  <script>
+    // Navegação simples: mostra/oculta seções
+    (function(){
+      const sections = {
+        home: document.getElementById('home'),
+        classes: document.getElementById('classes'),
+        clans: document.getElementById('clans'),
+        history: document.getElementById('history'),
+        contact: document.getElementById('contact')
+      };
+
+      const btns = {
+        home: document.getElementById('btn-home'),
+        classes: document.getElementById('btn-classes'),
+        clans: document.getElementById('btn-clans'),
+        history: document.getElementById('btn-history'),
+        contact: document.getElementById('btn-contact'),
+      };
+
+      function show(key){
+        // esconder tudo
+        Object.values(sections).forEach(s => s.classList.add('hidden'));
+        // remover active
+        Object.values(btns).forEach(b => b.classList.remove('active'));
+        // mostrar o pedido
+        sections[key].classList.remove('hidden');
+        btns[key].classList.add('active');
+        // rolar pro topo do bloco
+        sections[key].scrollIntoView({behavior:'smooth', block:'start'});
+      }
+
+      // eventos
+      btns.home.addEventListener('click', ()=>show('home'));
+      btns.classes.addEventListener('click', ()=>show('classes'));
+      btns.clans.addEventListener('click', ()=>show('clans'));
+      btns.history.addEventListener('click', ()=>show('history'));
+      btns.contact.addEventListener('click', ()=>show('contact'));
+
+      // início: mostrar home
+      show('home');
+    })();
+  </script>
+</body>
+</html>
